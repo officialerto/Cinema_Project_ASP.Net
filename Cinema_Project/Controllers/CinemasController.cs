@@ -21,8 +21,8 @@ namespace Cinema_Project.Controllers
         // It should also be noted that if there is no await statement inside an async function, that method will still work synchronously.
         public async Task<IActionResult> Index()
         {
-            var allProducers = await _context.Cinemas.ToListAsync();
-            return View();
+            var allCinemas = await _context.Cinemas.ToListAsync();
+            return View(allCinemas);
         }
     }
 }
